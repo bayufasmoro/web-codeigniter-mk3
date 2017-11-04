@@ -5,8 +5,7 @@ class register extends CI_Controller {
         parent::__construct();
         $this->load->model('user_model');
         $this->load->helper('url_helper');
-        $this->load->helper('form');
-		$this->load->library('form_validation');
+        $this->load->library('session');
     }
 	
 	public function index() {
@@ -14,6 +13,9 @@ class register extends CI_Controller {
 	}
 
 	public function create() {
+		$this->load->helper('form');
+		$this->load->library('form_validation');
+
 		$this->form_validation->set_rules('password', 'Password', 'required');
 		$this->form_validation->set_rules('repassword', 'Retype Password', 'matches[password]');
 
@@ -24,11 +26,24 @@ class register extends CI_Controller {
             $this->load->view('register_view', $data);
 		} else {
 			$result = $this->user_model->insert_user();
-            $data = array(
-				'success_message' => 'Sukses! Data telah berhasil ditambahkan.'
-			);
+            // Read data user in table
+			if (isset($result)) {
+				$session_data = array(
+					'username' => $result['username'],
+					'email' => $result['email'],
+					'name' => $result['name']
+				);
 
-			$this->load->view('register_view', $data);
+                // Add user data in session
+				$this->session->set_userdata('logged_in', $session_data);
+				redirect(site_url("home"));
+			} else {
+				$data = array(
+					'error_message' => 'Kesalahan! Data tidak berhasil dimasukkan ke dalam database.'
+				);
+
+				$this->load->view('register_view', $data);
+			}
 		}
 	}
 

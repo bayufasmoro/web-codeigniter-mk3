@@ -10,7 +10,9 @@
     <body>
         <div class="navbar">
             <ul>
-              <li><a href="#">SELAMAT DATANG</a></li>
+              <!-- <li><a href="<?php echo site_url(); ?>/home">Beranda</a></li> -->
+              <li class="active" style="float:right"><a href="<?php echo site_url(); ?>/register">Register</a></li>
+              <li style="float:right"><a href="<?php echo site_url(); ?>/login">Masuk</a></li>
             </ul>
         </div>
         <?php
@@ -33,10 +35,7 @@
             }
         ?>
         <div class="wrapper">
-            <center>
-                <h1>Formulir Pendaftaran</h1>
-                <h3>Silahkan isi seluruh data di bawah ini dengan benar</h3>
-            </center>
+            <center><h1>Formulir Pendaftaran</h1></center>
             <form method="post" action="<?php echo site_url(); ?>/register/create">
                 <table class="tableForm">
                     <tr>
