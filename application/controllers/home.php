@@ -53,9 +53,6 @@ class home extends CI_Controller {
 
         $this->load->library('pdf');
         $this->pdf->load_view('member_list', $data);
-        
-        $this->pdf->render();
-        $this->pdf->stream("DaftarAnggota.pdf");
 
     }
 }

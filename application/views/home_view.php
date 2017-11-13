@@ -71,7 +71,8 @@
             </tr>
             <?php endforeach; ?>
           </table>
-          Silahkan print <a href="<?php echo site_url(); ?>/home/mypdf">di sini</a>
+          <br>
+          <a href="<?php echo site_url(); ?>/home/mypdf">Silahkan cetak menjadi pdf di sini</a>
         </div>
         <div class="footer">
           <hr>
