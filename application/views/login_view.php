@@ -11,8 +11,8 @@
     <body>
         <div class="navbar">
             <ul>
-              <li style="float:right"><a href="<?php echo site_url(); ?>/register">Register</a></li>
-              <li class="active" style="float:right"><a href="<?php echo site_url(); ?>/login">Masuk</a></li>
+              <li style="float:right"><a href="<?php echo site_url(); ?>/register">REGISTER</a></li>
+              <li class="active" style="float:right"><a href="<?php echo site_url(); ?>/login">MASUK</a></li>
             </ul>
         </div>
         <?php
@@ -27,7 +27,7 @@
             }
         ?>
         <div class="wrapper_login">
-            <center><h3>Silahkan Login</h3></center>
+            <center><h3>SILAHKAN LOGIN</h3></center>
             <form method="post" action="<?php echo site_url(); ?>/login/login">
                 <table class="tableForm">
                     <tr>
@@ -39,7 +39,7 @@
                         <td><input type="password" name="password" required></td>
                     </tr>
                     <tr>
-                        <td colspan="2" class="tdButton"><input type="submit" value="Masuk" class="btn"></td>
+                        <td colspan="2"><input type="submit" value="MASUK" class="btn_login"></td>
                     </tr>
                 </table>
             </form>

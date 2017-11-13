@@ -10,8 +10,8 @@
     <body>
         <div class="navbar">
             <ul>
-              <li class="active" style="float:right"><a href="<?php echo site_url(); ?>/register">Register</a></li>
-              <li style="float:right"><a href="<?php echo site_url(); ?>/login">Masuk</a></li>
+              <li class="active" style="float:right"><a href="<?php echo site_url(); ?>/register">REGISTER</a></li>
+              <li style="float:right"><a href="<?php echo site_url(); ?>/login">MASUK</a></li>
             </ul>
         </div>
         <?php
@@ -34,7 +34,7 @@
             }
         ?>
         <div class="wrapper">
-            <center><h1>Formulir Pendaftaran</h1></center>
+            <center><h1>FORMULIR PENDAFTARAN</h1></center>
             <form method="post" action="<?php echo site_url(); ?>/register/create">
                 <table class="tableForm">
                     <tr>
@@ -97,7 +97,7 @@
                         <td><textarea name="description"></textarea></td>
                     </tr>
                     <tr>
-                        <td colspan="2" class="tdButton"><input type="submit" value="Kirim" class="btn"> <input type="reset" value="Hapus" class="btn"></td>
+                        <td colspan="2"><div style="float: right"><input type="reset" value="HAPUS" class="btn_register_reset"> <input type="submit" value="KIRIM" class="btn_register_submit"></div></td>
                     </tr>
                 </table>
             </form>

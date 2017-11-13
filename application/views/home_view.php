@@ -11,17 +11,17 @@
     <div class="home_content">
       <div class="navbar">
           <ul>
-            <li class="active"><a href="<?php echo site_url(); ?>/home">Beranda</a></li>
+            <li class="active"><a href="<?php echo site_url(); ?>/home">BERANDA</a></li>
             <?php
               $username = $session['username'];
               if (isset($username)) {
             ?>
-            <li style="float:right"><a href="<?php echo site_url(); ?>/home/logout">Keluar</a></li>
+            <li style="float:right"><a href="<?php echo site_url(); ?>/home/logout">KELUAR</a></li>
             <?php    
               } else {
             ?>
-            <li style="float:right"><a href="<?php echo site_url(); ?>/register">Register</a></li>
-            <li style="float:right"><a href="<?php echo site_url(); ?>/login">Masuk</a></li>
+            <li style="float:right"><a href="<?php echo site_url(); ?>/register">REGISTER</a></li>
+            <li style="float:right"><a href="<?php echo site_url(); ?>/login">MASUK</a></li>
             <?php
               }
             ?>
@@ -73,7 +73,8 @@
           <?php endforeach; ?>
         </table>
         <br>
-        Silahkan cetak menjadi pdf <a href="<?php echo site_url(); ?>/home/mypdf">di sini</a>
+        <!-- Silahkan cetak menjadi pdf di sini</a> -->
+        <a href="<?php echo site_url(); ?>/home/mypdf"> <input type="submit" value="Print to PDF" class="print_button"> </a>
       </div>
       <div class="footer">
         <hr>
