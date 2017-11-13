@@ -17,15 +17,15 @@ class home extends CI_Controller {
 				'username' => $this->session->userdata['logged_in']['username'],
 				'name' => $this->session->userdata['logged_in']['name']
 			);
+
+            $queryResult = $this->user_model->read_user_data();
+            if ($queryResult == false) {
+                $this->load->view('home_view', array('session' => $data));
+            } else {
+                $this->load->view('home_view', array('session' => $data, 'query' => $queryResult));
+            }
         } else {
         	redirect(site_url("login"));
-        }
-
-        $queryResult = $this->user_model->read_user_data();
-        if ($queryResult == false) {
-            $this->load->view('home_view', array('session' => $data));
-        } else {
-            $this->load->view('home_view', array('session' => $data, 'query' => $queryResult));
         }
     }
 
@@ -36,6 +36,27 @@ class home extends CI_Controller {
         $this->session->unset_userdata('logged_in', $sess_array);
         $data['message_display'] = 'Successfully Logout';
         redirect(base_url());
+    }
+
+    public function mypdf(){
+        
+        $session = array(
+            'username' => $this->session->userdata['logged_in']['username'],
+            'name' => $this->session->userdata['logged_in']['name']
+        );
+
+        $queryResult = $this->user_model->read_user_data();
+        $data = array(
+            'session' => $session, 
+            'query' => $queryResult
+        );
+
+        $this->load->library('pdf');
+        $this->pdf->load_view('member_list', $data);
+        
+        $this->pdf->render();
+        $this->pdf->stream("DaftarAnggota.pdf");
+
     }
 }
 ?>

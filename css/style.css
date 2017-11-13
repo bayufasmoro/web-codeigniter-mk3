@@ -162,6 +162,7 @@ input[type=reset]:hover {
     color: black;
 }
 
+/*Home*/
 .home_div_table {
     padding: 0% 20%
 }
@@ -172,6 +173,22 @@ input[type=reset]:hover {
 }
 
 .home_table td, .home_table th {
+    border: 1px solid black;
+    padding: 5px 10px
+}
+
+/*PDF page*/
+.member_div_table {
+    margin: 0px;
+    padding: 0px;
+}
+
+.member_table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.member_table td, .member_table th {
     border: 1px solid black;
     padding: 5px 10px
 }
