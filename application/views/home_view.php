@@ -38,8 +38,25 @@
           </h3>
           </center>
         </div>
-        <div>
-          <table>
+        <div class="home_div_table">
+          <br>
+          <br>
+          <br>
+          Daftar anggota :
+          <br>
+          <br>
+          <table class="home_table">
+            <tr style="background-color: #eee">
+              <th>Username</th>
+              <th>Email</th>
+              <th>Name</th>
+              <th>NIM</th>
+              <th>Address</th>
+              <th>City</th>
+              <th>Gender</th>
+              <th>Hobby</th>
+              <th>Decription</th>
+            </tr>
             <?php foreach($query as $row): ?>
             <tr>   
                 <td><?php echo $row->username; ?></td>

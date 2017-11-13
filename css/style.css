@@ -161,3 +161,17 @@ input[type=reset]:hover {
 .closebtn:hover {
     color: black;
 }
+
+.home_div_table {
+    padding: 0% 20%
+}
+
+.home_table {
+    border-collapse: collapse;
+    width: 70%;
+}
+
+.home_table td, .home_table th {
+    border: 1px solid black;
+    padding: 5px 10px
+}
