@@ -10,7 +10,6 @@
     <body>
         <div class="navbar">
             <ul>
-              <!-- <li><a href="<?php echo site_url(); ?>/home">Beranda</a></li> -->
               <li class="active" style="float:right"><a href="<?php echo site_url(); ?>/register">Register</a></li>
               <li style="float:right"><a href="<?php echo site_url(); ?>/login">Masuk</a></li>
             </ul>
@@ -40,36 +39,36 @@
                 <table class="tableForm">
                     <tr>
                         <td>User Name</td>
-                        <td><input type="text" name="username"></td>
+                        <td><input type="text" name="username" required></td>
                     </tr>
                     <tr>
                         <td>Password</td>
-                        <td><input type="password" name="password"></td>
+                        <td><input type="password" name="password" required></td>
                     </tr>
                     <tr>
                         <td>Re-type Password</td>
-                        <td><input type="password" name="repassword"></td>
+                        <td><input type="password" name="repassword" required></td>
                     </tr>
                     <tr>
                         <td>E-mail</td>
-                        <td><input type="email" name="email" size="40"></td>
+                        <td><input type="email" name="email" size="40" required></td>
                     </tr>
                     <tr>
                         <td>Nama</td>
-                        <td><input type="text" name="name"></td>
+                        <td><input type="text" name="name" required></td>
                     </tr>
                     <tr>
                         <td>NIM</td>
-                        <td><input type="text" name="nim"></td>
+                        <td><input type="text" name="nim" required></td>
                     </tr>
                     <tr>
                         <td>Alamat</td>
-                        <td><input type="text" name="address"></td>
+                        <td><input type="text" name="address" required></td>
                     </tr>
                     <tr>
                         <td>Kota Asal</td>
                         <td>
-                            <select name="city">
+                            <select name="city" required>
                                 <option value="bandung">Bandung</option>
                                 <option value="bekasi">Bekasi</option>
                                 <option value="cimahi">Cimahi</option>
@@ -83,7 +82,7 @@
                     </tr>
                     <tr>
                         <td>Jenis Kelamin</td>
-                        <td><input type="radio" name="gender" value="male"> Pria <input type="radio" name="gender" value="female"> Wanita</td>
+                        <td><input type="radio" name="gender" value="male" checked="checked"> Pria <input type="radio" name="gender" value="female"> Wanita</td>
                     </tr>
                     <tr>
                         <td>Hobi</td>
@@ -104,7 +103,7 @@
             </form>
         </div>
         <div class="wrapper">
-            <center>Bayu Febry Asmoro - 2017</center>
+            <center>&copy; 2017 Bayu Febry Asmoro</center>
         </div>
     </body>
 </html>

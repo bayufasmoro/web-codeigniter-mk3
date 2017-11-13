@@ -1,7 +1,10 @@
-body {
-    margin: 0
+html, body {
+    margin: 0;
+    padding:0;
+    height:100%;
 }
 
+/* Navbar */
 .navbar {
     margin: 0
 }
@@ -123,15 +126,7 @@ input[type=reset]:hover {
     background-color: #E53935;
 }
 
-.footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 50px;
-    text-align: center
-}
-
-/* The alert message box */
+/* Alert message box */
 .alert {
     padding: 20px;
     background-color: #f44336;
@@ -146,7 +141,7 @@ input[type=reset]:hover {
     margin-bottom: 15px;
 }
 
-/* The close button */
+/* Close button */
 .closebtn {
     margin-left: 15px;
     color: white;
@@ -162,9 +157,17 @@ input[type=reset]:hover {
     color: black;
 }
 
-/*Home*/
+/* Home Page */
+.home_content {
+    /*overflow: auto;*/
+    min-height: 100%;
+    position: relative;
+}
+
 .home_div_table {
-    padding: 0% 20%
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-bottom: 100px;
 }
 
 .home_table {
@@ -177,9 +180,9 @@ input[type=reset]:hover {
     padding: 5px 10px
 }
 
-/*PDF page*/
+/* PDF Page */
 .member_div_table {
-    margin: 0px;
+    margin: 0px 5px;
     padding: 0px;
 }
 
@@ -191,4 +194,13 @@ input[type=reset]:hover {
 .member_table td, .member_table th {
     border: 1px solid black;
     padding: 5px 10px
+}
+
+/* Footer */
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    text-align: center;
 }

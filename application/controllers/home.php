@@ -11,7 +11,7 @@ class home extends CI_Controller {
     }
 
    	public function index() {
-   		// load session data
+   		// Load session data
         if($this->session->userdata("logged_in") != null) {
         	$data = array(
 				'username' => $this->session->userdata['logged_in']['username'],
@@ -39,15 +39,9 @@ class home extends CI_Controller {
     }
 
     public function mypdf(){
-        
-        $session = array(
-            'username' => $this->session->userdata['logged_in']['username'],
-            'name' => $this->session->userdata['logged_in']['name']
-        );
 
         $queryResult = $this->user_model->read_user_data();
         $data = array(
-            'session' => $session, 
             'query' => $queryResult
         );
 

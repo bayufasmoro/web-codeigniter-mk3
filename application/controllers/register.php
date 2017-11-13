@@ -5,11 +5,16 @@ class register extends CI_Controller {
         parent::__construct();
         $this->load->model('user_model');
         $this->load->helper('url_helper');
+
         $this->load->library('session');
     }
 	
 	public function index() {
-		$this->load->view('register_view');
+		if($this->session->userdata("logged_in") == "") {
+            $this->load->view('register_view');
+        } else {
+            redirect(site_url("home"));            
+        }
 	}
 
 	public function create() {

@@ -10,7 +10,17 @@
         // Insert data to table user
         public function insert_user() {
             $hobbyArr = $this->input->post('hobby');
-            $hobby = implode(',',$hobbyArr);
+            
+            $hobby = "";
+            if (!empty($hobbyArr)) {
+            	$hobby = implode(',',$hobbyArr);
+        	}
+
+        	$descForm = $this->input->post('description');
+        	$desc = "";
+        	if (!empty($descForm)) {
+        		$desc = $descForm;
+        	}
             
 			$data = array(
 				'username' => $this->input->post('username'),
@@ -22,7 +32,7 @@
 				'city' => $this->input->post('city'),
 				'gender' => $this->input->post('gender'),
 				'hobby' => $hobby,
-				'desc' => $this->input->post('description')
+				'desc' => $desc
 			);
 
 			$this->db->insert('user', $data);

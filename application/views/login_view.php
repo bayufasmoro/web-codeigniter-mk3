@@ -11,7 +11,6 @@
     <body>
         <div class="navbar">
             <ul>
-              <!-- <li><a href="<?php echo site_url(); ?>/home">Beranda</a></li> -->
               <li style="float:right"><a href="<?php echo site_url(); ?>/register">Register</a></li>
               <li class="active" style="float:right"><a href="<?php echo site_url(); ?>/login">Masuk</a></li>
             </ul>
@@ -46,7 +45,7 @@
             </form>
         </div>
         <div class="wrapper_login">
-            <center>Bayu Febry Asmoro - 2017</center>
+            <center>&copy; 2017 Bayu Febry Asmoro</center>
         </div>
     </body>
 </html>
