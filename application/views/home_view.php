@@ -12,6 +12,7 @@
       <div class="navbar">
           <ul>
             <li class="active"><a href="<?php echo site_url(); ?>/home">BERANDA</a></li>
+            <li><a href="<?php echo site_url(); ?>/ktp">Data KTP</a></li>
             <?php
               $username = $session['username'];
               if (isset($username)) {
