@@ -32,7 +32,7 @@
         <br><br><br>
         <center><font style="font-size: 18pt">Tambah KTP</font></center>
         <br><br>
-        <?php echo form_open('ktp/add'); ?>
+        <?php echo form_open_multipart('ktp/add'); ?>
 			<div>
 				NIK<span class="field-required">*</span> : 
 				<input type="text" name="nik" value="<?php echo $this->input->post('nik'); ?>" maxlength="16" required />
@@ -129,7 +129,10 @@
 				Alamat<span class="field-required">*</span> : 
 				<textarea name="alamat" required ><?php echo $this->input->post('alamat'); ?></textarea>
 			</div>
-			
+			<div>
+				Upload Foto<span class="field-required">*</span> :
+				<input type="file" name="userPhoto" size="20" required />
+			</div>
 			<button type="submit" class="save_button">Save</button>
 		</div>
 		<?php echo form_close(); ?>

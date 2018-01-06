@@ -43,6 +43,23 @@ class ktp extends CI_Controller {
     function add() {   
 
         if(isset($_POST) && count($_POST) > 0)      {   
+
+            $new_image_name = time().str_replace(str_split(' ()\\/,:*?"<>|'), '', $_FILES['image_file']['name']);
+            $config['upload_path']      = './uploads/';
+            $config['allowed_types']    = 'gif|jpg|png';
+            $config['file_name']        = $new_image_name;
+            $config['max_size']         = 100;
+            $config['max_width']        = 1024;
+            $config['max_height']       = 768;
+
+            $this->load->library('upload', $config);
+
+            if ( ! $this->upload->do_upload('userPhoto')) {
+                $error = array('error' => $this->upload->display_errors());
+            } else {
+                $data = array('upload_data' => $this->upload->data());
+            }
+
             $params = array(
                 'nik' => $this->input->post('nik'),
                 'jenis_kelamin' => $this->input->post('jenis_kelamin'),
@@ -60,6 +77,7 @@ class ktp extends CI_Controller {
                 'kewarganegaraan' => $this->input->post('kewarganegaraan'),
                 'berlaku_hingga' => $this->input->post('berlaku_hingga'),
                 'alamat' => $this->input->post('alamat'),
+                'photo' => $new_image_name,
             );
             
             $ktp_id = $this->ktp_model->add_ktp($params);
