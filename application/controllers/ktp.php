@@ -88,6 +88,7 @@ class ktp extends CI_Controller {
         if(isset($data['ktp']['nik'])) {
             if(isset($_POST) && count($_POST) > 0) {   
                 $params = array(
+                    'nik' => $this->input->post('nik'),
                     'jenis_kelamin' => $this->input->post('jenis_kelamin'),
                     'golongan_darah' => $this->input->post('golongan_darah'),
                     'nama' => $this->input->post('nama'),

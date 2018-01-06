@@ -35,8 +35,12 @@
 
 		<?php echo form_open('ktp/edit/'.$ktp['nik']); ?>
 			<div>
-				Jenis Kelamin : 
-				<select name="jenis_kelamin">
+				NIK<span class="field-required">*</span> : 
+				<input type="text" name="nik" value="<?php echo ($this->input->post('nik') ? $this->input->post('nik') : $ktp['nik']); ?>" readonly required />
+			</div>
+			<div>
+				Jenis Kelamin<span class="field-required">*</span> : 
+				<select name="jenis_kelamin" required>
 					<option value="">select</option>
 					<?php 
 					$jenis_kelamin_values = array(
@@ -54,8 +58,8 @@
 				</select>
 			</div>
 			<div>
-				Golongan Darah : 
-				<select name="golongan_darah">
+				Golongan Darah<span class="field-required">*</span> : 
+				<select name="golongan_darah" required>
 					<option value="">select</option>
 					<?php 
 					$golongan_darah_values = array(
@@ -75,16 +79,16 @@
 				</select>
 			</div>
 			<div>
-				Nama : 
-				<input type="text" name="nama" value="<?php echo ($this->input->post('nama') ? $this->input->post('nama') : $ktp['nama']); ?>" />
+				Nama<span class="field-required">*</span> : 
+				<input type="text" name="nama" value="<?php echo ($this->input->post('nama') ? $this->input->post('nama') : $ktp['nama']); ?>" required />
 			</div>
 			<div>
-				Tempat Lahir : 
-				<input type="text" name="tempat_lahir" value="<?php echo ($this->input->post('tempat_lahir') ? $this->input->post('tempat_lahir') : $ktp['tempat_lahir']); ?>" />
+				Tempat Lahir<span class="field-required">*</span> : 
+				<input type="text" name="tempat_lahir" value="<?php echo ($this->input->post('tempat_lahir') ? $this->input->post('tempat_lahir') : $ktp['tempat_lahir']); ?>" required />
 			</div>
 			<div>
-				Tanggal Lahir : 
-				<input type="date" name="tanggal_lahir" value="<?php echo ($this->input->post('tanggal_lahir') ? $this->input->post('tanggal_lahir') : $ktp['tanggal_lahir']); ?>" />
+				Tanggal Lahir<span class="field-required">*</span> : 
+				<input type="date" name="tanggal_lahir" value="<?php echo ($this->input->post('tanggal_lahir') ? $this->input->post('tanggal_lahir') : $ktp['tanggal_lahir']); ?>" required />
 			</div>
 			<div>
 				Rt : 
@@ -103,31 +107,31 @@
 				<input type="text" name="kecamatan" value="<?php echo ($this->input->post('kecamatan') ? $this->input->post('kecamatan') : $ktp['kecamatan']); ?>" />
 			</div>
 			<div>
-				Agama : 
-				<input type="text" name="agama" value="<?php echo ($this->input->post('agama') ? $this->input->post('agama') : $ktp['agama']); ?>" />
+				Agama<span class="field-required">*</span> : 
+				<input type="text" name="agama" value="<?php echo ($this->input->post('agama') ? $this->input->post('agama') : $ktp['agama']); ?>" required />
 			</div>
 			<div>
-				Status Perkawinan : 
-				<input type="text" name="status_perkawinan" value="<?php echo ($this->input->post('status_perkawinan') ? $this->input->post('status_perkawinan') : $ktp['status_perkawinan']); ?>" />
+				Status Perkawinan<span class="field-required">*</span> : 
+				<input type="text" name="status_perkawinan" value="<?php echo ($this->input->post('status_perkawinan') ? $this->input->post('status_perkawinan') : $ktp['status_perkawinan']); ?>" required />
 			</div>
 			<div>
 				Pekerjaan : 
 				<input type="text" name="pekerjaan" value="<?php echo ($this->input->post('pekerjaan') ? $this->input->post('pekerjaan') : $ktp['pekerjaan']); ?>" />
 			</div>
 			<div>
-				Kewarganegaraan : 
-				<input type="text" name="kewarganegaraan" value="<?php echo ($this->input->post('kewarganegaraan') ? $this->input->post('kewarganegaraan') : $ktp['kewarganegaraan']); ?>" />
+				Kewarganegaraan<span class="field-required">*</span> : 
+				<input type="text" name="kewarganegaraan" value="<?php echo ($this->input->post('kewarganegaraan') ? $this->input->post('kewarganegaraan') : $ktp['kewarganegaraan']); ?>" required />
 			</div>
 			<div>
-				Berlaku Hingga : 
-				<input type="date" name="berlaku_hingga" value="<?php echo ($this->input->post('berlaku_hingga') ? $this->input->post('berlaku_hingga') : $ktp['berlaku_hingga']); ?>" />
+				Berlaku Hingga<span class="field-required">*</span> : 
+				<input type="date" name="berlaku_hingga" value="<?php echo ($this->input->post('berlaku_hingga') ? $this->input->post('berlaku_hingga') : $ktp['berlaku_hingga']); ?>" required />
 			</div>
 			<div>
-				Alamat : 
-				<textarea name="alamat"><?php echo ($this->input->post('alamat') ? $this->input->post('alamat') : $ktp['alamat']); ?></textarea>
+				Alamat<span class="field-required">*</span> : 
+				<textarea name="alamat" required><?php echo ($this->input->post('alamat') ? $this->input->post('alamat') : $ktp['alamat']); ?></textarea>
 			</div>
 			
-			<button type="submit">Save</button>
+			<button type="submit" class="save_button">Save</button>
 		</div>		
 		<?php echo form_close(); ?>
 	</div>

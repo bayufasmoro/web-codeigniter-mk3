@@ -258,3 +258,18 @@ textarea {
 .border_button_gray:hover {
     background-color: #e7e7e7;
 }
+
+.save_button {
+    width: 150px;
+    padding: 10px 20px;
+    background-color: #43A047;
+    font-size: 14pt;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.field-required {
+    color: #ff0000;
+}
