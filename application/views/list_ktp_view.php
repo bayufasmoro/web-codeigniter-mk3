@@ -28,14 +28,14 @@
             ?>
           </ul>
       </div>
-      <div class="home_div_table">
+      <div class="member_div_table">
         <br><br><br>
         <div>
           <span>Daftar KTP :</span>
           <span style="float: right"><a href="<?php echo site_url(); ?>/ktp/add"> <input type="submit" value="+ Tambah KTP" class="border_button border_button_blue"> </a></span>
         </div>
         <br><br>
-        <table class="home_table" style="width: 100%">
+        <table class="member_table" style="width: 100%">
           <tr style="background-color: #eee">
             <th>Nik</th>
             <th>Jenis Kelamin</th>
