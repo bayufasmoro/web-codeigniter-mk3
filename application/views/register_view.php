@@ -10,7 +10,7 @@
     <body>
         <div class="navbar">
             <ul>
-              <li class="active" style="float:right"><a href="<?php echo site_url(); ?>/register">REGISTER</a></li>
+              <li class="active" style="float:right"><a href="<?php echo site_url(); ?>/register">DAFTAR</a></li>
               <li style="float:right"><a href="<?php echo site_url(); ?>/login">MASUK</a></li>
             </ul>
         </div>
@@ -34,7 +34,7 @@
             }
         ?>
         <div class="wrapper">
-            <center><h1>FORMULIR PENDAFTARAN</h1></center>
+            <center><h3>FORMULIR PENDAFTARAN</h3></center>
             <form method="post" action="<?php echo site_url(); ?>/register/create">
                 <table class="tableForm">
                     <tr>

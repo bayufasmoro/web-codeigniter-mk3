@@ -39,6 +39,29 @@ class ktp extends CI_Controller {
         }
     }
 
+    //Show ktp
+    function show($nik) {   
+        
+        $data['ktp'] = $this->ktp_model->get_ktp($nik);
+        
+        if(isset($data['ktp']['nik'])) {
+              
+            if($this->session->userdata("logged_in") != null) {
+                $session = array(
+                    'username' => $this->session->userdata['logged_in']['username'],
+                    'name' => $this->session->userdata['logged_in']['name']
+                );
+
+                $data['_view'] = 'ktp/show';
+                $this->load->view('show_ktp_view', array('session' => $session, 'ktp' => $data['ktp']));
+            } else {
+                redirect(site_url("login"));
+            }
+        } else {
+            show_error('Ktp yang Anda ditampilkan tidak ada.');
+        }
+    }
+
     //Adding a new ktp
     function add() {   
 

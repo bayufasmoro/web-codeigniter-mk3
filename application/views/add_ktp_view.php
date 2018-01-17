@@ -29,7 +29,7 @@
           </ul>
       </div>
       <div class="wrapper">
-        <br><br><br>
+        <br>
         <center><font style="font-size: 18pt">Tambah KTP</font></center>
         <br><br>
         <?php echo form_open_multipart('ktp/add'); ?>

@@ -29,7 +29,7 @@
           </ul>
       </div>
       <div class="wrapper">
-        <br><br><br>
+        <br>
         <center><font style="font-size: 18pt">Ubah KTP</font></center>
         <br><br>
 
