@@ -186,6 +186,17 @@ class ktp extends CI_Controller {
         }
     }
 
+    public function mypdf(){
+
+        $queryResult = $this->ktp_model->get_all_ktp();
+        $data = array(
+            'ktp' => $queryResult
+        );
+
+        $this->load->library('pdf');
+        $this->pdf->load_view('ktp_list', $data);
+    }
+
     public function logout() {
         $sess_array = array(
             'username' => ''

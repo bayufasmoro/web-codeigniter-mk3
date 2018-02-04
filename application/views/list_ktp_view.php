@@ -77,6 +77,9 @@
             </tr>
           <?php } ?>
         </table>
+        <br>
+        <!-- Print to pdf -->
+        <a href="<?php echo site_url(); ?>/ktp/mypdf"> <input type="submit" value="Print to PDF" class="print_button"> </a>
       </div>
       <div class="footer">
         <hr>

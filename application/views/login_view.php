@@ -7,6 +7,12 @@
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="<? echo base_url();?>css/style.css">
+        <style>
+        body {
+            background-image: url(../assets/img/spiration-light.png);
+            background-repeat: repeat;
+        }
+        </style>
     </head>
     <body>
         <div class="navbar">
@@ -26,6 +32,8 @@
         <?php
             }
         ?>
+        <br>
+        <center><h3>WEBSITE PENDATAAN PENDUDUK INDONESIA</h3></center>
         <div class="wrapper_login">
             <center><h3>SILAHKAN MASUK</h3></center>
             <form method="post" action="<?php echo site_url(); ?>/login/login">

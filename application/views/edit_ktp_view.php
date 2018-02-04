@@ -93,15 +93,15 @@
 			</tr>
 			<tr>
 				<td>Tanggal Lahir<span class="field-required">*</span> : </td>
-				<td><input type="date" name="tanggal_lahir" value="<?php echo ($this->input->post('tanggal_lahir') ? $this->input->post('tanggal_lahir') : $ktp['tanggal_lahir']); ?>" required /></td>
+				<td><input type="date" name="tanggal_lahir" value="<?php echo ($this->input->post('tanggal_lahir') ? $this->input->post('tanggal_lahir') : $ktp['tanggal_lahir']); ?>" max=<?php echo date('Y-m-d'); ?> required /></td>
 			</tr>
 			<tr>
 				<td>Rt : </td>
-				<td><input type="text" name="rt" value="<?php echo ($this->input->post('rt') ? $this->input->post('rt') : $ktp['rt']); ?>" maxlength="4" /></td>
+				<td><input type="text" name="rt" value="<?php echo ($this->input->post('rt') ? $this->input->post('rt') : $ktp['rt']); ?>" maxlength="3" /></td>
 			</tr>
 			<tr>
 				<td>Rw : </td>
-				<td><input type="text" name="rw" value="<?php echo ($this->input->post('rw') ? $this->input->post('rw') : $ktp['rw']); ?>" maxlength="4" /></td>
+				<td><input type="text" name="rw" value="<?php echo ($this->input->post('rw') ? $this->input->post('rw') : $ktp['rw']); ?>" maxlength="3" /></td>
 			</tr>
 			<tr>
 				<td>Kelurahan : </td>
@@ -113,7 +113,29 @@
 			</tr>
 			<tr>
 				<td>Agama<span class="field-required">*</span> : </td>
-				<td><input type="text" name="agama" value="<?php echo ($this->input->post('agama') ? $this->input->post('agama') : $ktp['agama']); ?>" required /></td>
+				<!-- <td><input type="text" name="agama" value="<?php echo ($this->input->post('agama') ? $this->input->post('agama') : $ktp['agama']); ?>" required /></td> -->
+				<td>
+					<select name="agama" required>
+					<option value="">select</option>
+					<?php 
+					$jenis_kelamin_values = array(
+						'Islam'=>'Islam',
+						'Kristen Protestan'=>'Kristen Protestan',
+						'Katolik'=>'Katolik',
+						'Hindu'=>'Hindu',
+						'Buddha'=>'Buddha',
+						'Kong Hu Cu'=>'Kong Hu Cu'
+					);
+
+					foreach($jenis_kelamin_values as $value => $display_text)
+					{
+						$selected = ($value == $ktp['agama']) ? ' selected="selected"' : "";
+
+						echo '<option value="'.$value.'" '.$selected.'>'.$display_text.'</option>';
+					} 
+					?>
+					</select>
+				</td>
 			</tr>
 			<tr>
 				<td>Status Perkawinan<span class="field-required">*</span> : </td>
@@ -125,7 +147,25 @@
 			</tr>
 			<tr>
 				<td>Kewarganegaraan<span class="field-required">*</span> : </td>
-				<td><input type="text" name="kewarganegaraan" value="<?php echo ($this->input->post('kewarganegaraan') ? $this->input->post('kewarganegaraan') : $ktp['kewarganegaraan']); ?>" required /></td>
+				<!-- <td><input type="text" name="kewarganegaraan" value="<?php echo ($this->input->post('kewarganegaraan') ? $this->input->post('kewarganegaraan') : $ktp['kewarganegaraan']); ?>" required /></td> -->
+				<td>
+					<select name="kewarganegaraan" required>
+					<option value="">select</option>
+					<?php 
+					$jenis_kelamin_values = array(
+						'WNI'=>'WNI',
+						'WNA'=>'WNA'
+					);
+
+					foreach($jenis_kelamin_values as $value => $display_text)
+					{
+						$selected = ($value == $ktp['kewarganegaraan']) ? ' selected="selected"' : "";
+
+						echo '<option value="'.$value.'" '.$selected.'>'.$display_text.'</option>';
+					} 
+					?>
+					</select>
+				</td>
 			</tr>
 			<tr>
 				<td>Berlaku Hingga<span class="field-required">*</span> : </td>
